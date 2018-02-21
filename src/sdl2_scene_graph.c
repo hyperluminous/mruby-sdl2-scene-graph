@@ -352,6 +352,7 @@ mrb_sdl2_video_renderer_start_draw(mrb_state *mrb, mrb_value self)
   n = (struct scene_graph_node *)DATA_PTR(arg);
 
   glPushMatrix();
+    glMatrixMode(GL_MODELVIEW);
     glTranslatef( n->x, n->y, 0 );
     glRotatef( n->angle, (GLfloat)0.0, (GLfloat)0.0, (GLfloat)1.0);
     glScalef( n->scale_x, n->scale_y, 1.0);

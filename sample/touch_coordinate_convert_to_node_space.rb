@@ -26,6 +26,7 @@ class Node < SceneGraph::Node
 end
 
 def init_sdl
+  SDL2::Hints::set SDL2::Hints::SDL_HINT_RENDER_DRIVER, "opengl"
   SDL2::init
   SDL2::Video::init
   w = 640
@@ -34,8 +35,8 @@ def init_sdl
   y = SDL2::Video::Window::SDL_WINDOWPOS_CENTERED
   flag = SDL2::Video::Window::SDL_WINDOW_OPENGL
   window = SDL2::Video::Window.new "sample", x,y, w,h, flag
-  p [window.title,  window.width, window.height]
   renderer = SDL2::Video::Renderer.new window
+  p [window.title, window.width, window.height, renderer.info.name]
   return window, renderer
 end
 
