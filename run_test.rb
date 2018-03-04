@@ -22,7 +22,7 @@ MRuby::Build.new do |conf|
 
   conf.cc.command = ENV['CC'] || 'gcc'
   conf.enable_test
-  conf.gem github: 'ecirmoa/mruby-sdl2'
+  conf.gem github: 'mruby-sdl2/mruby-sdl2'
   conf.gembox 'default'
   conf.gem File.expand_path(File.dirname(__FILE__))
 

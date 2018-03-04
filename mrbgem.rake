@@ -1,6 +1,8 @@
 MRuby::Gem::Specification.new('mruby-sdl2-scene-graph') do |spec|
   spec.license = 'MIT'
-  spec.authors = 'ecirmoa'
+  spec.authors = 'kabies'
+  spec.version = '0.1.0'
+
   spec.add_dependency 'mruby-sdl2'
 
   if build.kind_of?(MRuby::CrossBuild)
