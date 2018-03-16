@@ -11,5 +11,6 @@ MRuby::Gem::Specification.new('mruby-sdl2-scene-graph') do |spec|
     spec.linker.flags << '-framework OpenGL'
   else
     spec.cc.flags << '`sdl2-config --cflags`'
+    spec.linker.libraries << 'GL'
   end
 end
